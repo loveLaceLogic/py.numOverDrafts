@@ -1,0 +1,11 @@
+# This program calculates the account fee for a checking account.
+print ('Enter the balance: ')
+balance = input()
+print ('Enter the number of overdrafts:')
+numOverDrafts = input()
+balance = int(balance)
+numOverDrafts = int(numOverDrafts)
+fee = (0.01 * balance) - (5 * numOverDrafts)
+fee = str(fee)
+print ('Your fee is ' + fee)
+print ('Thanks for using this program.')
