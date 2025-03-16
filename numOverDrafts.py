@@ -1,11 +1,16 @@
 # This program calculates the account fee for a checking account.
-print ('Enter the balance: ')
-balance = input()
-print ('Enter the number of overdrafts:')
-numOverDrafts = input()
-balance = int(balance)
-numOverDrafts = int(numOverDrafts)
-fee = (0.01 * balance) - (5 * numOverDrafts)
-fee = str(fee)
-print ('Your fee is ' + fee)
-print ('Thanks for using this program.')
+
+try:
+    # Get user inputs for balance and number of overdrafts
+    balance = int(input("Enter the balance: "))
+    numOverDrafts = int(input("Enter the number of overdrafts: "))
+
+    # Calculate the fee
+    fee = (0.01 * balance) - (5 * numOverDrafts)
+
+    # Display the fee, ensuring it's formatted properly
+    print(f"Your fee is: ${fee:.2f}")
+    print("Thanks for using this program.")
+    
+except ValueError:
+    print("Invalid input! Please enter valid numbers for balance and overdrafts.")
